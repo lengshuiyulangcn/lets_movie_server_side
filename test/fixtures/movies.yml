@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  image_thumb: MyString
+  image_middle: MyString
+  image_large: MyString
+  description: MyText
+  casts: MyText
+  directors: MyText
+  start_date: 2017-05-16 09:34:01
+  end_date: 2017-05-16 09:34:01
+
+two:
+  title: MyString
+  image_thumb: MyString
+  image_middle: MyString
+  image_large: MyString
+  description: MyText
+  casts: MyText
+  directors: MyText
+  start_date: 2017-05-16 09:34:01
+  end_date: 2017-05-16 09:34:01
