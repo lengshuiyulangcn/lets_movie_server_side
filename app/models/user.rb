@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id         :integer          not null, primary key
+#  nickname   :string
+#  avatar_url :string
+#  open_id    :string
+#  session_id :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class User < ApplicationRecord
   def self.from_token_request request
     User.find_or_create_by_wechat(request)
