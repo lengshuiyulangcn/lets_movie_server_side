@@ -4,6 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  nickname   :string
+#  wechat_id  :string
 #  avatar_url :string
 #  open_id    :string
 #  session_id :string
@@ -12,6 +13,8 @@
 #
 
 class User < ApplicationRecord
+  has_many :created_invitations, class_name: "Invite", foreign_key: "inviter_id"
+  has_many :accepted_invitations, class_name: "Invite", foreign_key: "invitee_id"
   def self.from_token_request request
     User.find_or_create_by_wechat(request)
   end
@@ -26,7 +29,7 @@ class User < ApplicationRecord
     open_id = JSON.load(response.body)["openid"]
     session_id = JSON.load(response.body)["session_key"]
     return nil unless open_id
-    entity = self.find_or_create(open_id: open_id) do |user|
+    entity = self.find_or_create_by(open_id: open_id) do |user|
  			user.nickname = nickname
       user.avatar_url = avatar_url
 			user.session_id = session_id

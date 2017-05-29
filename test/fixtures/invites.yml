@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: invites
+#
+#  id         :integer          not null, primary key
+#  inviter_id :integer
+#  invitee_id :integer
+#  movie_id   :integer
+#  meet_at    :datetime
+#  location   :string
+#  memo       :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inviter: one
+  invitee: one
+  movie: one
+  meet_at: 2017-05-17 21:40:46
+  location: MyString
+  memo: MyText
+
+two:
+  inviter: two
+  invitee: two
+  movie: two
+  meet_at: 2017-05-17 21:40:46
+  location: MyString
+  memo: MyText

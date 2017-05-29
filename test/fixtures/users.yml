@@ -4,6 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  nickname   :string
+#  wechat_id  :string
 #  avatar_url :string
 #  open_id    :string
 #  session_id :string

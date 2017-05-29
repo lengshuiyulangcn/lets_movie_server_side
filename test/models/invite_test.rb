@@ -1,20 +1,21 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: invites
 #
 #  id         :integer          not null, primary key
-#  nickname   :string
-#  wechat_id  :string
-#  avatar_url :string
-#  open_id    :string
-#  session_id :string
+#  inviter_id :integer
+#  invitee_id :integer
+#  movie_id   :integer
+#  meet_at    :datetime
+#  location   :string
+#  memo       :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class UserTest < ActiveSupport::TestCase
+class InviteTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

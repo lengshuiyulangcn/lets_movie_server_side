@@ -13,6 +13,6 @@ class Api::V1::UsersController < Api::V1::ApiController
 
   private
   def user_params
-		 params.permit(:wechat_id)
+    params.permit(:wechat_id)
   end
 end
